@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ListaTarea()
+comment0.text=\r\n\ 1-A\u00F1adir\ una\ tarea\ indicando\ su\ descripcion\r\n
+comment1.params=nuevaTarea
+comment1.target=void\ annadirTarea(java.lang.String)
+comment1.text=\r\n\ A\u00F1ade\ una\ nueva\ tareaboo\r\n
+comment2.params=
+comment2.target=void\ mostrarTareas()
+comment2.text=\r\n\ 2-Ver\ todas\ las\ tareas\ numeradas\ pudiendo\ ver\ si\ estan\ completadas\ o\ no.\r\n
+numComments=3

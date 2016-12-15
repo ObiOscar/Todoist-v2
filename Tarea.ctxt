@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=crearDescripci\u00F3n
+comment0.target=Tarea(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tarea\r\n
+comment1.params=
+comment1.target=java.lang.String\ getDescripcion()
+comment2.params=
+comment2.target=boolean\ getRealizada()
+comment3.params=
+comment3.target=boolean\ marcarCompletado()
+numComments=4
