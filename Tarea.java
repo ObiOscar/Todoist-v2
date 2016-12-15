@@ -9,8 +9,8 @@
  */
 public class Tarea
 {
-    private String descripcion;
-    private boolean realizada;
+    private String descripcion;		// Atributo de la descripcion (nombre) de la tarea
+    private boolean realizada;		//Atributo donde guardo el estado de la tarea.
 
 
     /**
@@ -18,8 +18,8 @@ public class Tarea
      */
     public Tarea(String crearDescripción)
     {
-        descripcion = crearDescripción;
-        realizada = false;
+        descripcion = crearDescripción;		//Se introduce en el constructor
+        realizada = false;		//La inicializo a false
 
     }
 
