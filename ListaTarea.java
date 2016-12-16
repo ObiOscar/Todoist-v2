@@ -12,7 +12,7 @@ public class ListaTarea
     private ArrayList<Tarea> listaDeTareas;
     
     /**
-	 *Constructor
+     *Constructor
      */
     public ListaTarea()
     {
@@ -24,7 +24,7 @@ public class ListaTarea
      */
     public void annadirTarea(String nuevaTarea )
     {   
-      Tarea annadirTarea  = new Tarea(nuevaTarea);		//Creo un objeto de la clase Tarea como variable local.
+      Tarea annadirTarea  = new Tarea(nuevaTarea);      //Creo un objeto de la clase Tarea como variable local.
       listaDeTareas.add(annadirTarea); 
     }   
     
@@ -33,10 +33,10 @@ public class ListaTarea
      */
     public void mostrarTareas()
     {
-	  int x = 1;		
+      int x = 1;        
       for (Tarea tarea : listaDeTareas){
         System.out.println(x + " - " + tarea.toString());
-	    x++;
+        x++;
       }
     }
 
@@ -45,14 +45,14 @@ public class ListaTarea
      */
     public void tareaCompletada(int numeroTarea)
     {
-    	int tareaVisualizaUsuario = numeroTarea - 1;
-		if(numeroTarea > 0 && numeroTarea <= listaDeTareas.size()){
-			Tarea objeto = listaDeTareas.get(tareaVisualizaUsuario);
-			objeto.marcarCompletado();
-		}
-		else{
-        		System.out.println("Tarea no encontrada");
-		  }
+        int tareaVisualizaUsuario = numeroTarea - 1;
+        if(numeroTarea > 0 && numeroTarea <= listaDeTareas.size()){
+            Tarea objeto = listaDeTareas.get(tareaVisualizaUsuario);
+            objeto.marcarCompletado();
+        }
+        else{
+                System.out.println("Tarea no encontrada");
+          }
     } 
 
     /**
@@ -60,25 +60,41 @@ public class ListaTarea
      */
     public void buscarTareas(String textoBuscar)
     {
-		int sumador = 0;
-		while(sumador < listaDeTareas.size()){
-			Tarea objeto = listaDeTareas.get(sumador);
-			if(objeto.getDescripcion().contains(textoBuscar)){
-       			 System.out.println((sumador + 1) + " - " +objeto.toString());
-			}
-			sumador++;
-    	} 
-	}
+        int sumador = 0;
+        while(sumador < listaDeTareas.size()){
+            Tarea objeto = listaDeTareas.get(sumador);
+            if(objeto.getDescripcion().contains(textoBuscar)){
+                 System.out.println((sumador + 1) + " - " +objeto.toString());
+            }
+            sumador++;
+        } 
+    }
 
     /**
      * 5-Eliminar una tarea indicando su numero
      */
     public void eliminarTarea(int numeroTareaEliminar)
     {
-		numeroTareaEliminar = numeroTareaEliminar - 1;
-		if(numeroTareaEliminar >= 0 && numeroTareaEliminar < listaDeTareas.size()){
-			listaDeTareas.remove(numeroTareaEliminar);
-		}		
-	}
+        numeroTareaEliminar = numeroTareaEliminar - 1;
+        if(numeroTareaEliminar >= 0 && numeroTareaEliminar < listaDeTareas.size()){
+            listaDeTareas.remove(numeroTareaEliminar);
+        }       
+    }
+    
+    /**
+    * 6-Implementar la prioridad, las tareas pueden tener prioridad de 0 a 5. Por defecto las tareas tienen 
+    * prioridad 0. Conseguir ser capaz de establecer prioridades y de que se muestren en los listados de tareas.
+     */
+    public void cambiarPrioridad(int numeroTareaParaCambiar,int nuevaPrioridad)
+    {
+        numeroTareaParaCambiar = numeroTareaParaCambiar -1;
+     
+        if(numeroTareaParaCambiar > 0 && numeroTareaParaCambiar <= listaDeTareas.size() && nuevaPrioridad >= 0 && nuevaPrioridad <=5){
+            Tarea objeto = listaDeTareas.get(numeroTareaParaCambiar);
+            objeto.cambiarPrioridad(nuevaPrioridad);
+            System.out.println((numeroTareaParaCambiar + 1) + " - " +objeto.toString());    
+        }
+    }
+    
 }
 
