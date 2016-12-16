@@ -9,8 +9,8 @@
  */
 public class Tarea
 {
-    private String descripcion;		// Atributo de la descripcion (nombre) de la tarea
-    private boolean realizada;		//Atributo donde guardo el estado de la tarea.
+    private String descripcion;     // Atributo de la descripcion (nombre) de la tarea
+    private boolean realizada;      //Atributo donde guardo el estado de la tarea.
 
 
     /**
@@ -18,8 +18,8 @@ public class Tarea
      */
     public Tarea(String crearDescripción)
     {
-        descripcion = crearDescripción;		//Se introduce en el constructor
-        realizada = false;		//La inicializo a false
+        descripcion = crearDescripción;     //Se introduce en el constructor
+        realizada = false;      //La inicializo a false
 
     }
 
@@ -35,10 +35,22 @@ public class Tarea
 
     public boolean marcarCompletado()
     {
-		if(realizada == false){
-			realizada = true;
-    	}
-       	return realizada;
+        if(realizada == false){
+            realizada = true;
+        }
+        return realizada;
+    }
+    
+    /**Muestra por pantalla hecha o no, y luego la descripción       
+     */
+    public String toString()
+    {
+        String textoADevolver = "";
+        if(realizada){
+            textoADevolver += "Hecha ";
+        }
+         textoADevolver += descripcion;
+         return textoADevolver;        
     }
 }
 

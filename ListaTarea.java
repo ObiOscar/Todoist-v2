@@ -35,7 +35,7 @@ public class ListaTarea
     {
 	  int x = 1;		
       for (Tarea tarea : listaDeTareas){
-        System.out.println(x + "-" + tarea.getDescripcion() + " Su estado es : " + tarea.getRealizada());
+        System.out.println(x + " - " + tarea.toString());
 	    x++;
       }
     }
@@ -60,12 +60,11 @@ public class ListaTarea
      */
     public void buscarTareas(String textoBuscar)
     {
-		boolean coincidencia = false;
 		int sumador = 0;
-		while(sumador < listaDeTareas.size() && !coincidencia){
+		while(sumador < listaDeTareas.size()){
 			Tarea objeto = listaDeTareas.get(sumador);
 			if(objeto.getDescripcion().contains(textoBuscar)){
-       			 System.out.println((sumador + 1) + " - " +objeto.getDescripcion());
+       			 System.out.println((sumador + 1) + " - " +objeto.toString());
 			}
 			sumador++;
     	} 
